@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A magical anti-gravity cosmic birthday celebration — floating through stars, memories, and endless love." />
+  <meta name="theme-color" content="#0a0015" />
+  <title>Happy Birthday, My Amazing Friend! 🎂✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Dancing+Script:wght@600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+
+<body>
+
+  <canvas id="cosmicCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-logo">🌌 Birthday Universe</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#scratch-card" class="nav-link">Scratch</a></li>
+      <li><a href="#enchanted-cake" class="nav-link">Cake</a></li>
+      <li><a href="#message" class="nav-link">Message</a></li>
+      <li><a href="#concert" class="nav-link">Concert</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-content">
+      <div class="floating-emoji-ring" aria-hidden="true">
+        <span class="orbit-item" style="--deg:0deg">🎂</span>
+        <span class="orbit-item" style="--deg:51deg">🎈</span>
+        <span class="orbit-item" style="--deg:102deg">🎁</span>
+        <span class="orbit-item" style="--deg:153deg">⭐</span>
+        <span class="orbit-item" style="--deg:204deg">🌙</span>
+        <span class="orbit-item" style="--deg:255deg">🪐</span>
+        <span class="orbit-item" style="--deg:306deg">💫</span>
+      </div>
+      <div class="hero-badge">✨ A Cosmic Celebration ✨</div>
+      <h1 class="hero-title">
+        <span class="title-line line-1">Happy Birthday,</span>
+        <span class="title-line line-2">My Amazing Friend!</span>
+      </h1>
+      <p class="hero-subtitle">May your dreams rise higher than gravity<br />and shine brighter than the stars.</p>
+    </div>
+    <div class="hero-floaters" aria-hidden="true">
+      <div class="floater f1">🎂</div>
+      <div class="floater f2">🎈</div>
+      <div class="floater f3">🎁</div>
+      <div class="floater f4">⭐</div>
+      <div class="floater f5">🌟</div>
+      <div class="floater f6">🪐</div>
+      <div class="floater f7">🎉</div>
+      <div class="floater f8">💖</div>
+      <div class="floater f9">🌙</div>
+      <div class="floater f10">✨</div>
+      <div class="floater f11">🎊</div>
+      <div class="floater f12">🌺</div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== SECRET SCRATCH CARD ===== -->
+  <section id="scratch-card" class="section scratch-card-section" aria-labelledby="scratchTitle">
+    <div class="section-header">
+      <div class="section-tag">✨ Secret Reveal</div>
+      <h2 id="scratchTitle" class="section-title">Scratch for a Surprise</h2>
+      <p class="section-desc">Use your finger or mouse to scratch off the golden layer and reveal your hidden birthday blessing!</p>
+    </div>
+
+    <div class="scratch-container">
+      <!-- The secret message underneath -->
+      <div class="scratch-secret glass-card">
+        <h3>🌟 Golden Blessing 🌟</h3>
+        <p>May this new chapter of your life overflow with unexpected miracles, unstoppable success, and boundless joy. The universe has beautiful things in store for you, Keep shining!</p>
+      </div>
+      <!-- The canvas covering it -->
+      <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+    </div>
+  </section>
+
+
+  <!-- ===== ENCHANTED CAKE CELEBRATION ===== -->
+  <section id="enchanted-cake" class="section enchanted-cake-section" aria-labelledby="cakeTitle">
+    <div class="section-header">
+      <div class="section-tag">🎉 Grand Celebration</div>
+      <h2 id="cakeTitle" class="section-title">The Birthday Gala</h2>
+      <p class="section-desc">Make a wish! Click on all 5 candles to blow them out.</p>
+    </div>
+
+    <div class="enchanted-environment" style="background-image: url('boys_party_bright_bg.png');">
+      <div class="cake-container">
+        <!-- The Cake -->
+        <div class="cake-tier top-tier">
+          <div class="candles-wrapper" style="pointer-events:none; z-index:20;">
+            <div class="candle" onclick="blowOutCandle(this)" style="pointer-events:auto; cursor:pointer;"><div class="flame"></div><div class="smoke"></div></div>
+            <div class="candle" onclick="blowOutCandle(this)" style="pointer-events:auto; cursor:pointer;"><div class="flame"></div><div class="smoke"></div></div>
+            <div class="candle" onclick="blowOutCandle(this)" style="pointer-events:auto; cursor:pointer;"><div class="flame"></div><div class="smoke"></div></div>
+            <div class="candle" onclick="blowOutCandle(this)" style="pointer-events:auto; cursor:pointer;"><div class="flame"></div><div class="smoke"></div></div>
+            <div class="candle" onclick="blowOutCandle(this)" style="pointer-events:auto; cursor:pointer;"><div class="flame"></div><div class="smoke"></div></div>
+          </div>
+        </div>
+        <div class="cake-tier bottom-tier">
+          <div class="cake-name" id="cakeText">Happy<br>Birthday</div>
+        </div>
+        <div class="cake-plate"></div>
+      </div>
+      
+      <div class="cake-success-msg" id="cakeSuccessMsg">
+        Happiest Birthday....🎂🎉
+      </div>
+
+      <!-- Date Balloons -->
+      <div class="date-balloons" aria-hidden="true">
+        <div class="date-balloon b1">20</div>
+        <div class="date-balloon b2">06</div>
+      </div>
+    </div>
+
+    <script>
+      // Candle blow-out logic - inline to guarantee it works
+      var candlesBrownOut = 0;
+      var totalCandles = 5;
+      function blowOutCandle(el) {
+        if (el.classList.contains('out')) return;
+        el.classList.add('out');
+        candlesBrownOut++;
+        
+        // Mini confetti on each blow
+        if (typeof launchConfettiDots === 'function') launchConfettiDots();
+        
+        // All 5 candles blown out!
+        if (candlesBrownOut >= totalCandles) {
+          var cakeText = document.getElementById('cakeText');
+          var msg = document.getElementById('cakeSuccessMsg');
+          
+          setTimeout(function() {
+            if (cakeText) {
+              cakeText.style.opacity = 0;
+              setTimeout(function() {
+                cakeText.innerHTML = 'Happiest<br>Birthday';
+                cakeText.style.opacity = 1;
+              }, 500);
+            }
+            if (msg) msg.classList.add('show');
+            
+            // Big confetti celebration
+            for (var i = 0; i < 30; i++) {
+              if (typeof launchConfettiDots === 'function') {
+                setTimeout(launchConfettiDots, i * 100);
+              }
+            }
+            
+            // Do not auto-scroll or auto-open messages. Just celebrate on the cake.
+            setTimeout(function() {
+                // If you want fireworks to start in the background, you can trigger them here
+                // if (typeof startFireworks === 'function') startFireworks(true);
+            }, 1500);
+          }, 500);
+        }
+      }
+    </script>
+  </section>
+
+    <!-- ===== SPECIAL MESSAGE - COSMIC ENVELOPE LETTER ===== -->
+  <section id="message" class="section message-section" aria-labelledby="messageTitle">
+    <div class="section-header">
+      <div class="section-tag">💌 A Letter For You</div>
+      <h2 id="messageTitle" class="section-title">Sent From the Heart</h2>
+      <p class="section-desc">A special letter sealed with love and delivered across the stars — just for you.</p>
+    </div>
+    <div class="envelope-scene" id="envelopeScene">
+      <div class="env-stars" aria-hidden="true">
+        <span class="env-star es1">✦</span>
+        <span class="env-star es2">✦</span>
+        <span class="env-star es3">✦</span>
+        <span class="env-star es4">✦</span>
+        <span class="env-star es5">✦</span>
+        <span class="env-star es6">✦</span>
+        <span class="env-star es7">✦</span>
+      </div>
+      <div class="envelope-wrap" id="envelopeWrap">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Click to open your birthday letter" aria-expanded="false">
+          <div class="env-flap" id="envFlap">
+            <div class="env-flap-inner">
+              <div class="env-seal" id="envSeal"><span class="seal-icon">✝</span></div>
+            </div>
+          </div>
+          <div class="env-body">
+            <div class="env-lines"><span></span><span></span><span></span></div>
+            <div class="env-address">
+              <div class="env-to">To My Dearest Friend</div>
+              <div class="env-from">From: The Stars Above 🌌</div>
+            </div>
+          </div>
+          <div class="env-hint" id="envHint">
+            <span class="pulse-dot"></span> Click to open your letter
+          </div>
+        </div>
+      </div>
+      <div class="letter-reveal" id="letterReveal" aria-hidden="true">
+        <div class="letter-paper" id="letterPaper">
+          <div class="letter-top-bar">
+            <span class="ltr-deco">✦ ✝ ✦</span>
+            <span class="ltr-date" id="ltrDate"></span>
+          </div>
+          <p class="letter-salutation">My Dearest Friend,</p>
+          <p class="letter-para">On your special day, I pray that God blesses you with good health, endless happiness, peace, and success in every step of your life. May every dream you have come true, and may you always find the strength to overcome every challenge.</p>
+          <p class="letter-para">Thank you for being such a wonderful friend. I hope this year brings you beautiful memories, exciting opportunities, and countless reasons to smile.</p>
+          <p class="letter-para">Stay kind, stay humble, and never stop believing in yourself. Wishing you a life filled with love, laughter, and endless blessings.<br><br>Happy Birthday once again!</p>
+          <p class="letter-closing">Happy Birthday, beloved friend. 🙏✨</p>
+          <p class="letter-sign">— With all my love and prayers forever 💛</p>
+          <div class="letter-divider"><span>🕊️</span><span class="ltr-rule"></span><span>🌿</span><span class="ltr-rule"></span><span>✝️</span><span class="ltr-rule"></span><span>🕊️</span></div>
+          <div class="letter-petals" aria-hidden="true">
+            <span class="petal p1">🌸</span><span class="petal p2">✦</span>
+            <span class="petal p3">💛</span><span class="petal p4">🌿</span>
+            <span class="petal p5">✦</span><span class="petal p6">🌸</span>
+          </div>
+        </div>
+        <button class="letter-close-btn" id="letterCloseBtn" aria-label="Close letter">✕ Close Letter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE CONCERT ===== -->
+  <section id="concert" class="section concert-section" aria-labelledby="concertTitle">
+    <div class="section-header">
+      <div class="section-tag">🎤 Live Performance</div>
+      <h2 id="concertTitle" class="section-title">Mr.Srinath's Live Concert</h2>
+      <p class="section-desc">A special live concert dedicated entirely to you. Feel the music and let the crowd cheer for the birthday star!</p>
+    </div>
+
+    <div class="concert-container">
+      <div class="concert-stage glass-card">
+        <img src="boy_concert_singer.png" alt="Birthday boy singing passionately to an audience at a concert" class="concert-img">
+        <div class="concert-overlay">
+          <div class="concert-info">
+            <h3>LIVE: CONCERT 🎵</h3>
+            <p>Performed by: The Best Singer Mr.Srinath</p>
+          </div>
+          <div class="crowd-cheers">
+            <span class="cheer c1">🎉</span>
+            <span class="cheer c2">🙌</span>
+            <span class="cheer c3">👏</span>
+            <span class="cheer c4">💖</span>
+            <span class="cheer c5">🎶</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-lights">
+        <div class="light-beam lb-left"></div>
+        <div class="light-beam lb-right"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer" aria-label="Footer">
+    <p>Made with 💖 and stardust for the most amazing friend in the universe</p>
+    <p class="footer-stars" aria-hidden="true">✨ 🌟 💫 ⭐ 🌙 💖 🎂 ✨</p>
+  </footer>
+
+  <!-- Inbox Modal -->
+  <div class="wishes-modal" id="wishesModal" aria-hidden="true">
+    <div class="wishes-modal-content glass-card">
+      <button class="wishes-close" id="wishesClose" aria-label="Close messages">✕</button>
+      <h2>📱 Inbox (3 New)</h2>
+      <p class="inbox-instructions">Click on a message below to open and read it!</p>
+      
+      <div class="wishes-list">
+        
+        <details class="wish-item">
+          <summary>
+            <div class="sender-info">
+              <span class="app-icon">💬</span>
+              <div>
+                <strong>WhatsApp - Anna</strong>
+                <div class="preview-text">Tap to view message...</div>
+              </div>
+            </div>
+            <span class="click-hint">Open 📥</span>
+          </summary>
+          <div class="wish-text">
+            "Happy birthday anna! 🎂❤️ Wishing you an amazing year ahead!"
+          </div>
+        </details>
+
+        <details class="wish-item">
+          <summary>
+            <div class="sender-info">
+              <span class="app-icon">📸</span>
+              <div>
+                <strong>Instagram - Friends</strong>
+                <div class="preview-text">Tap to view message...</div>
+              </div>
+            </div>
+            <span class="click-hint">Open 📥</span>
+          </summary>
+          <div class="wish-text">
+            "Happy birthday srii! Party time! 🥳 Keep shining!"
+          </div>
+        </details>
+
+        <details class="wish-item">
+          <summary>
+            <div class="sender-info">
+              <span class="app-icon">💬</span>
+              <div>
+                <strong>WhatsApp - Bro</strong>
+                <div class="preview-text">Tap to view message...</div>
+              </div>
+            </div>
+            <span class="click-hint">Open 📥</span>
+          </summary>
+          <div class="wish-text">
+            "happy brithday bro! Have a blast 🚀 Stay awesome!"
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+
+      <!-- ===== END PAGE ===== -->
+    <section id="end-page" class="section end-page-section" aria-labelledby="endPageTitle">
+      <div class="end-content glass-card">
+        <h2 id="endPageTitle" class="end-title">Thank You for Visiting!</h2>
+        <p class="end-subtitle">May your birthday be filled with love, joy, and endless wonder.</p>
+        <button class="btn-back-top" id="backTopBtn" aria-label="Back to top">⬆️ Back to Top</button>
+      </div>
+    </section>
+    <script src="app.js?v=17"></script>
+</body>
+
+</html>
